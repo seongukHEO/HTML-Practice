@@ -75,10 +75,96 @@
       <form action="">
         <!-- 다른 프로그래밍을 배워본 사람이라면 알겠지만 무조건적으로 한 페이지에서 id는 같으면 안된다 -->
         <!-- 이메일 input은 form과 함께 사용하면 강력해진다..? -->
+        <!-- 이메일 형식 아니라면 바로 에러를 띄워준다 근데 이건 form 태그 안에 있어야만 된다-->
         <label for="emailUser">이메일 주소는?</label>
         <input type="email" id="emailUser" />
+        <!-- button 중에서도 submit 버튼은 클릭할 경우 action에 지정해놓은 경로로 이동한다 자동으로! -->
         <button type="submit">저장</button>
       </form>
+    </div>
+
+    <div>
+      <!-- 와 파일 첨부...? 개 미쳤는데? -->
+      <label for="setFile">파일 첨부</label>
+      <input type="file" id="setFile" />
+    </div>
+
+    <div>
+      <!-- 사용자 눈에는 숨겨둔다  -->
+      <input type="hidden" />
+    </div>
+
+    <div>
+      <!-- <img src="img/france_gh.png" alt="" style="width: 100px; height: auto;"> -->
+      <!-- input에도 이미지를 넣을 수 있다? -->
+      <!-- 약간 클릭이 가능한 형식으로 나타난다 -->
+      <!-- but 잘 쓰진 않는다 -->
+      <input
+        type="image"
+        src="img/france_gh.png"
+        style="width: 100; height: auto"
+      />
+    </div>
+
+    <div>
+      <!-- 이건 년월만 선택할 수 있는 화면이 나타난다 -->
+      <label for="yearMonth">생년년월</label>
+      <input type="month" , id="yearMonth" />
+    </div>
+
+    <div>
+      <!-- 이건 숫자를 입력받는 것이다  -->
+      <!-- max를 넣어주면 그것 이상으로는 안올라간다  -->
+      <!-- min을 넣어주면 그것 이하로는 안내려가고 -->
+      <label for="userNumber">당신의 나이는?</label>
+      <input type="number" , id="userNumber" min="0" max="100" />
+    </div>
+
+    <div>
+      <label for="userPass">비밀번호</label>
+      <input type="password" id="userPass" />
+    </div>
+
+    <div>
+      <!-- 전화번호를 입력하는 용도이다 -->
+      <form action="">
+        <label for="phone">전화번호</label>
+        <!-- pattern은 javascript 정규식 -->
+        <input type="tel" id="phone" pattern="^010-\d{4}-\d{4}$S" />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+
+    <div>
+      <label for="nomalMes">일반 문자</label>
+      <input type="text" , id="nomalMes" />
+    </div>
+
+    <div>
+      <!-- 시간만 입력하는 창이 뜬다 -->
+      <label for="visitTime">예약 시간</label>
+      <input type="time" id="visitTime" />
+    </div>
+
+    <div>
+      <!-- 이것도 form이랑 함께 사용하면 url 형식이 맞는지 체크해준다 -->
+      <form action="">
+        <label for="userUrl">블로그 주소는?</label>
+        <input type="url" , id="userUrl" />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+
+    <div>
+      <!-- 와 이거 진짜 개신기하다,,, -->
+      <label for="weekPlan">주간 계획</label>
+      <input type="week" , id="weekPlan" />
+    </div>
+
+    <div>
+      <!-- 이건 input라인 오른쪽 끝에 X가 있어서 클릭하면 삭제가 된다 -->
+      <label for="searchKeyWord">검색 조건</label>
+      <input type="search" , id="searchKeyWord" />
     </div>
   </body>
 </html>
