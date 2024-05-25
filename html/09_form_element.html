@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 폼 요소란? -->
+    <!-- 사용자로부터 정보를 입력받기 위한 html 요소들 -->
+    <!-- 여기서 action은 무엇이냐면 아래의 코드에서 이메일과 비밀번호를 입력하고 버튼을 누르면 -->
+    <!-- action안에 있는 경로로 데이터가 이동한다!! -->
+    <form action="">
+      <div style="padding: 20dp">
+        <!-- label과 input을 사용할 때는 무조건 input에 id를 설정하고 label의 for에 입력해줘야한다 -->
+        <label for="useremail">이메일</label>
+        <!-- inputType은 그냥 어떤 타입을 입력 받을 것인지 -->
+        <input type="email" id="useremail" />
+      </div>
+      <div>
+        <label for="userPw">비밀번호</label>
+        <input type="password" id="userPw" />
+      </div>
+      <div>
+        <button>로그인</button>
+      </div>
+    </form>
+
+    <h4>당신이 배우고 싶은 언어는?(다중 선택 가능)</h4>
+    <div>
+      <!-- 오 html은 체크박스를 이런식으로 하는구나,,,, -->
+      <!-- name이라는 속성은 쉽게 말해서 여기 있는 체크박스를 하나의 묶음으로 해주는 것을 의미한다 -->
+      <!-- 그러므로 해당 묶음에 속해있는 체크박스들은 같은 name을 가져야한다 -->
+      <input type="checkbox" id="chk_html" name="chk_lang" />
+      <label for="chk_html">HTML</label>
+      <input type="checkbox" id="chk_CSS" name="chk_lang" />
+      <label for="chk_CSS">CSS</label>
+      <input type="checkbox" id="chk_Kotlin" name="chk_lang" />
+      <label for="chk_Kotlin">Kotlin</label>
+    </div>
+
+    <h4>당신이 배우고 싶은 언어는? (하나만 선택가능)</h4>
+    <!-- 와 여기서 name지정 안해주니까 다중 선택되고 체크 해제도 안된다 -->
+    <!-- 왜냐면 name을 안해주면 이게 그룹인지 인식을 못하기 때문이다 -->
+    <!-- 생각을 해보면 체크박스는 개별이기 때문에 딱히 필요없을 거 같고 라디오 버튼은 꼭 필요할 거 같다 -->
+    <div>
+      <input type="radio" , id="radio_html" name="radio_lang" />
+      <label for="radio_html">HTML</label>
+      <input type="radio" , id="radio_CSS" name="radio_lang" />
+      <label for="radio_CSS">CSS</label>
+      <input type="radio" , id="radio_Kotlin" name="radio_lang" />
+      <label for="radio_Kotlin">Kotlin</label>
+    </div>
+
+    <div>
+      <!-- 와 미친,,,,inputType이 굉장히 다양하다,,, -->
+      <label for="favoriteColor">가장 좋아하는 색상은?</label>
+      <input type="color" value="" id="favoriteColor" />
+    </div>
+
+    <div>
+      <!-- 와 미친,,,,,달력도 뜨네...? -->
+      <!-- 진짜 input의 id와 label의 for를 맞춰주는 습관을 들여야한다 매우매우매우 중요하다 -->
+      <label for="calDate">태어난 날짜는?</label>
+      <input type="date" id="calDate" />
+    </div>
+
+    <div>
+      <!-- 와 진짜 웹이 좋구나 개미쳤네,,,, 날짜와 시간을 선택할 수 있다 -->
+      <label for="dateTime">입국한 날짜 시간은?</label>
+      <input type="datetime-local" id="dateTime" />
+    </div>
+
+    <div>
+      <form action="">
+        <!-- 다른 프로그래밍을 배워본 사람이라면 알겠지만 무조건적으로 한 페이지에서 id는 같으면 안된다 -->
+        <!-- 이메일 input은 form과 함께 사용하면 강력해진다..? -->
+        <label for="emailUser">이메일 주소는?</label>
+        <input type="email" id="emailUser" />
+        <button type="submit">저장</button>
+      </form>
+    </div>
+  </body>
+</html>

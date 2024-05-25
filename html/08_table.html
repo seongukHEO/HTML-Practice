@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 이렇게 해준 이유는 안드로이드에서 theme를 지정하는 이유와 같다 -->
+    <!-- 안드로이드에서 버튼의 색을 빨간색으로 한다고 했을 때 -->
+    <!-- 일일이 버튼 color를 넣어주기 보단 애초에 theme에 가서 버튼 색을 빨강으로 바꿔버리면 매우 간편하다 -->
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 100%;
+      }
+      /* th {
+        border: 1px solid black;
+      }
+      td {
+        border: 1px solid black;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- 표 : table -->
+    <!-- 행 : tr -->
+    <!-- 셀 : td, th -->
+    <!-- th는 주로 열의 제목에서 사용되고 td는 데이터를 넣을 때 사용된다 -->
+    <!-- thead -> 제목이 들어가는 th태그들 -->
+    <!-- tbody -> 이건 데이터가 들어가는 tr태그들을 넣어준다 -->
+    <!-- 이렇게 해준뒤 head에서 style을 지정해줘야 표같이 나타난다 -->
+    <table>
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락처</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-0000-0000</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>김종국</td>
+          <td>010-0000-0001</td>
+          <td>kim@gmail.com</td>
+        </tr>
+        <tr>
+          <td>송지효</td>
+          <td>010-0000-0002</td>
+          <td>song@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>학년</th>
+          <th>반</th>
+          <th>학생수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- rowspan은 해당 td가 행 몇 개를 차지할 지 정하는 것이다 -->
+          <td rowspan="3">1학년</td>
+          <td>1반</td>
+          <td>18명</td>
+        </tr>
+        <tr>
+          <!-- <td>1학년</td> -->
+          <td>2반</td>
+          <td>19명</td>
+        </tr>
+        <tr>
+          <!-- <td>1학년</td> -->
+          <td>3반</td>
+          <td>18명</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <!-- colspan은 해당 td가 몇 개의 열을 차지할 것인지 정한다 -->
+          <td colspan="2">합계</td>
+          <!-- <td></td> -->
+          <td>55명</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

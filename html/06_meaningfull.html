@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 얘는 전 시간에 만들었던 볼드체이고 -->
+    <p style="font-weight: bold">볼드체</p>
+    <!-- 이건 새로운 방법이다,,, -->
+    <b>볼드체</b>
+
+    <!-- 미친 이런 것도 된다 -->
+    <!-- 이렇게 하면 b태그 안에 있는 건 볼드체로 나오고 p태그 안에 있는건 일반 글씨로 나온다 -->
+    <p><b>볼드체</b>입니다</p>
+
+    <!-- strong으로도 볼드체를 만들 수 있다 -->
+    <!-- 이건 강조하는 볼드체이다 -->
+    <!-- 그니까 어떠한 화면에서 꼭 강조를 세게 해야겠다는 부분이 있다면 strong태그를 꼭 사용해라 -->
+    <p><strong>볼드체</strong>입니다</p>
+
+    <!-- 둘 다 이텔릭체로 만들 수 있다 -->
+    <!-- 둘 다 크게 상관없으니 아무거나 써라 -->
+    <p style="font-style: italic">안녕하세요~이텔릭체 입니다!</p>
+    <i>나도 이텔릭체인데?!?</i>
+
+    <!-- em태그는 강조하는 이텔릭체이다 -->
+    <p><em>이텔릭체 입니다.</em></p>
+
+    <!-- small 태그를 사용하면 폰트 크기를 줄여준다 -->
+    <p>텍스트가 <small>작게 해줘여</small></p>
+
+    <!-- 오우 이건 mark태그 안에 들어간 단어만 형광색 밑줄이 쳐져있다,,! -->
+    <p>
+      집에 오는 길에
+      <mark style="color: aquamarine; background-color: bisque">우유</mark>를
+      사는 것일 잊지마라
+    </p>
+
+    <!-- del태그는 del 태그 내부에 삽입된 텍스트에 취소선이 그어진다 -->
+    <p>제품 할인 중 <del>원래 3마넌 이였는데</del>이제 2만 8처넌이야</p>
+
+    <!-- ins 태그는 밑줄을 그려준다! -->
+    <p>
+      내가 제일 좋아하는 색상은 <ins style="color: yellow">노란색</ins>입니다
+    </p>
+
+    <!-- 이건 그냥 수학적 공식,,? 별로 쓸일이 없을듯하다 -->
+    <p>X <sub>2</sub></p>
+    <p>X <sup>2</sup></p>
+    <!-- 이건 긴 문장을 인용할 때 사용한다 -->
+    <!-- 약간 기사를 인용할 때 사용하면 될 거 같다 -->
+    <blockquote cite="주소를 적어준다">
+      긴 문장 인용을 할 때 사용한다
+    </blockquote>
+
+    <!-- 짧은 문장을 인용할 때 사용하며 자동으로 쌍따옴표가 생성된다 -->
+    <q>짧은 문장 인용</q>
+
+    <!-- 오호 이건 태그 사이에 약자를 적어주고 title에 풀네임을 적어주면 텍스트 형식으로는 약자가 뜨지만 -->
+    <!-- 마우스를 가져다대면 풀 네임이 뜬다 -->
+    <abbr title="World Health Organization">WHO</abbr>
+
+    <!-- address태그는 주소를 입력할 때 사용해준다 -->
+    <address>경기도 고양시 00구</address>
+
+    <!-- cite태그는 작품명, 음반명, 영화명, 제품의 이름을 쓸 때 사용한다 -->
+    <p><cite>절규</cite>는 뭉크가 1893년에 그린 그림입니다</p>
+
+    <!-- 의미없는 태그 div, span -->
+    <!-- div와 span은 다른 태그를 담는 container의 역할을 해준다 -->
+    <!-- 화면의 컨텐츠를 배치하기 위한 레이아웃 야아악간 LinearLayout과 같은 느낌! -->
+    <!-- 화면을 보면 진짜 아 오케 -->
+    <!-- div는 match Parent인 layout이고 -->
+    <!-- span은 wrap content인 layout인듯 하다 -->
+    <!-- div는 block 요소이다, p태그도 block 요소이다 -->
+    <!-- span은 inLine 요소이다 자기가 가지고 있는 부분만 범위를 정한다 -->
+    <div style="background-color: blue">
+      <p>안녕</p>
+      <p>나는 허성욱</p>
+    </div>
+    <span style="background-color: green">span태그입니다</span>
+  </body>
+</html>
