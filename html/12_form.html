@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- action은 데이터를 전송할 주소 -->
+    <!-- method : method는 데이터를 전달할 방법 -->
+
+    <!-- get : 전송하는 데이터가 url에 붙어서 간다, 전송하는 데이터가 url에 노출이 된다, 보안에 취약 -->
+    <!-- 그러나 페이지 주소를 공유 해야 할 때 사용한다 -->
+    <!-- ex) 쇼핑하다가 마음에 들어서 주소를 복사해서 카톡으로 보낸다 이때 다른 사람이 그 주소를 클릭하면 바로 그 화면이 보인다 -->
+    <!-- 보낼 수 있는 데이터 크기에 제약이 있다 -->
+
+    <!-- post :  전송하는 데이터가 Url에 붙지 않는다-->
+    <!-- 사용자 눈에 보이지 않는다 그렇기 때문에 보안이 안정적이다 -->
+    <!-- 결국은 전송하는 데이터를 확인할 수 있다 (개발자 도구를 통해) -->
+    <!-- 보낼 수 있는 데이터 크기에 제약이 없다 -->
+
+    <!-- 그래서 전송하는 데이터를 암호화 해주면 좋다 예시를 봐보자 -->
+
+    <!-- 네이버의 경우 : https://www.naver.com/ 이렇게 https형태로 되어있지만 -->
+    <!-- 우리가 만들고 있는 페이지의 경우 http://127.0.0.1:5500/html/12_form.html 이렇게 http 형식으로 되어있다 -->
+    <!-- 근데 개발자가 할 수 있는 건 아니다 -->
+
+    <!-- target : 데이터를 전송할 창을 어디로 할 것인지 (default : _self) -->
+    <!-- _self : 자기 자신 창 -->
+    <!-- _blank : 새로운 창에 데이터를 보낸다 -->
+    <!-- _parent , top : i프레임을 배워야 알 수 있다 -->
+
+    <!-- formnovalidate : 입력된 값이 잘못되었을 때 클릭이 안되게한다 -->
+
+    <form action="전송할 주소" method="get" target="_self">
+      <div>
+        <label for="name">이름</label>
+        <input type="text" name="name" id="name" autocomplete="on" />
+      </div>
+      <div>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <button type="submit" formnovalidate="formnovalidate">저장</button>
+    </form>
+  </body>
+</html>
